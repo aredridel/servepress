@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const express = require('express');
 const epf = require('express-php-fpm');
 const ehm = require('express-htaccess-middleware');
