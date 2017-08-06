@@ -2,6 +2,7 @@ const express = require('express');
 const epf = require('express-php-fpm');
 const ehm = require('express-htaccess-middleware');
 const path = require('path');
+const socketactivation = require('systemd-socket');
 const yargs = require('yargs');
 
 const argv = yargs.demand(1).argv;
@@ -19,4 +20,4 @@ app.use(epf({
   socketOptions: { port: 9000 }
 }));
 
-app.listen(process.env.PORT || 8080);
+app.listen(socketactivation() || process.env.PORT || 8080);
