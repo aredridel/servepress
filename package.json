@@ -27,6 +27,9 @@
     "systemd-socket": "0.0.0",
     "yargs": "^8.0.2"
   },
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "eslintConfig": {
     "parserOptions": {
       "ecmaVersion": 6
