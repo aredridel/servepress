@@ -1,5 +1,10 @@
 #!/usr/bin/env node
 
+if (process.versions.modules < 57) {
+  require('async-to-gen/register')({ excludes: null })
+  require('util').promisify = require('es6-promisify');
+}
+
 const express = require('express');
 const epf = require('express-php-fpm');
 const ehm = require('@aredridel/express-htaccess-middleware');
