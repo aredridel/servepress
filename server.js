@@ -2,7 +2,7 @@
 
 const express = require('express');
 const epf = require('express-php-fpm');
-const ehm = require('express-htaccess-middleware');
+const ehm = require('@aredridel/express-htaccess-middleware');
 const path = require('path');
 const socketactivation = require('systemd-socket');
 const yargs = require('yargs');
@@ -13,7 +13,10 @@ const app = express();
 
 app.use(ehm({
   file: path.resolve(argv._[0], '.htaccess'),
-  watch: true
+  documentRoot: argv._[0],
+  watch: true,
+  server: app,
+  verbose: true
 }))
 
 app.use(epf({

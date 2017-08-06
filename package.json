@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/aredridel/servepress#readme",
   "dependencies": {
+    "@aredridel/express-htaccess-middleware": "^1.0.0",
     "express": "^3.21.2",
-    "express-htaccess-middleware": "^0.1.0",
     "express-php-fpm": "0.0.32",
     "systemd-socket": "0.0.0",
     "yargs": "^8.0.2"
