@@ -27,7 +27,7 @@
     "express": "^4.17.3",
     "express-php-fpm": "0.0.32",
     "systemd-socket": "0.0.0",
-    "yargs": "^8.0.2"
+    "yargs": "^17.6.2"
   },
   "engines": {
     "node": ">=6.0.0"
